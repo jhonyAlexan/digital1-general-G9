@@ -1,0 +1,75 @@
+name: Nueva tarea
+description: Tarea de trabajo del equipo (RTL, testbench, firmware, diagrama, integración o documentación)
+title: "[Tarea] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Una tarea debe producir **un resultado verificable** (idealmente ≤ 8 h).
+        Después de crearla, agréguela al proyecto y asigne `Sprint` y `Estimación`.
+  - type: input
+    id: periferico
+    attributes:
+      label: Periférico / módulo
+      description: Nombre del core afectado (igual que su carpeta en cores/) o "general".
+      placeholder: "blink, uart, general..."
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de tarea
+      options:
+        - RTL
+        - Testbench
+        - Firmware
+        - Diagrama
+        - Integración
+        - Documentación
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: ¿Qué hay que hacer y por qué? Enlace diagramas, registros o requisitos relevantes.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Lista verificable. La tarea está terminada cuando todos se cumplen.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] `make sim` pasa (si aplica)
+    validations:
+      required: true
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependencias
+      description: Tareas (#N) o resultados de otros equipos que deben existir antes.
+      placeholder: "Bloqueada por #12 / Requiere dirección asignada en memory_map.yml"
+  - type: input
+    id: estimacion
+    attributes:
+      label: Estimación (horas)
+      placeholder: "4"
+  - type: input
+    id: responsable
+    attributes:
+      label: Responsable propuesto
+      placeholder: "@usuario"
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: Prioridad
+      options:
+        - Media
+        - Alta
+        - Baja
+      default: 0
+    validations:
+      required: true
