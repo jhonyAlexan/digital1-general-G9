@@ -1,4 +1,4 @@
-# Consola de videojuegos sobre FPGA — Repositorio general (Diseño Digital 2)
+# Consola de videojuegos sobre FPGA — Repositorio general (Diseño Digital 1)
 
 Contiene lo **compartido por el curso**: arquitectura, construcción base del SoC LiteX (femtoRV32),
 interfaces, mapa de memoria e integración. Cada equipo trabaja en **su propio repositorio**: recibe de aquí
@@ -27,12 +27,6 @@ template/               lo que reciben los repos de equipo:
 ```
 
 ## Contrato de un periférico
-Módulo Verilog `perip_<nombre>` con los puertos: `clk`, `rst`, `d_in[31:0]`, `cs` (pulso de 1 ciclo),
-`addr[N-1:0]` (offset local en bytes, base ya restada), `rd`, `wr`, `d_out[31:0]` (combinacional con `cs & rd`),
-más sus pines propios. Accesos de 32 bits; offsets múltiplos de 4. Cada acceso toma 2 ciclos de bus.
-Se declara en `interfaces/memory_map.yml`; `soc/build.py` lo instancia y el driver C usa `memory_map.h`
-(nunca direcciones fijas). Un core = `diagramas/` + `rtl/` (Makefile, módulo, testbench PASS/FAIL, gtkw) + `firmware/` (.c/.h);
-copie `template/cores/blink/` como punto de partida.
 
 ## Comandos
 ```bash
