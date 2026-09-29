@@ -28,6 +28,14 @@ template/               lo que reciben los repos de equipo:
 
 ## Contrato de un periférico
 
+### Juego tipo Ritmo
+#### Mando tipo WII
+
+#### Tapete
+
+### Juego tipo Pelea
+
+
 ## Comandos
 ```bash
 pip install pyyaml && sudo apt install iverilog gtkwave
