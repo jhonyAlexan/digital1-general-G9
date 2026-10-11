@@ -1,6 +1,6 @@
 # Consola de videojuegos sobre FPGA — Repositorio general (Diseño Digital 1)
 
-Contiene lo **compartido por el curso**: arquitectura, construcción base del SoC LiteX (femtoRV32),
+Contiene lo **compartido por el curso**: arquitectura, construcción base del SoC LiteX,
 interfaces, mapa de memoria e integración. Cada equipo trabaja en **su propio repositorio**: recibe de aquí
 las actualizaciones comunes y devuelve aquí sus resultados validados.
 
